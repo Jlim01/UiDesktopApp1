@@ -13,7 +13,7 @@ namespace UiDesktopApp1.Views.Pages
       {
         ViewModel = viewModel;
         DataContext = this;
-
+        
         InitializeComponent();
       }
       catch(Exception ex)

@@ -10,16 +10,18 @@ namespace UiDesktopApp1.Views.User
   public partial class User : INavigableView<UserViewModel>
   {
     public UserViewModel ViewModel { get; }
-    //public User(UserViewModel viewModel)
-    //{
-    //  ViewModel = viewModel;
-    //  DataContext = this;
+    public User(UserViewModel viewModel)
+    {
 
+      InitializeComponent();
+      ViewModel = viewModel;
+      DataContext = this;
+
+    }
+
+    //public User()
+    //{
     //  InitializeComponent();
     //}
-    public User()
-    {
-      InitializeComponent();
-    }
   }
 }

@@ -6,8 +6,10 @@ using System.Reflection;
 using System.Windows.Threading;
 using UiDesktopApp1.Services;
 using UiDesktopApp1.ViewModels.Pages;
+using UiDesktopApp1.ViewModels.User;
 using UiDesktopApp1.ViewModels.Windows;
 using UiDesktopApp1.Views.Pages;
+using UiDesktopApp1.Views.User;
 using UiDesktopApp1.Views.Windows;
 using Wpf.Ui;
 
@@ -46,12 +48,15 @@ namespace UiDesktopApp1
           services.AddSingleton<INavigationWindow, MainWindow>();
           services.AddSingleton<MainWindowViewModel>();
 
+          services.AddSingleton<User>();
+          services.AddSingleton<UserViewModel>();
           services.AddSingleton<DashboardPage>();
           services.AddSingleton<DashboardViewModel>();
           services.AddSingleton<DataPage>();
           services.AddSingleton<DataViewModel>();
           services.AddSingleton<SettingsPage>();
           services.AddSingleton<SettingsViewModel>();
+
         }).Build();
 
     /// <summary>
