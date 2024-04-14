@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="UiDesktopApp1.Views.User.User"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UiDesktopApp1.Views.User"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DataContext="{d:DesignInstance local:User,
+                                 IsDesignTimeCreatable=False}"
+             d:DesignHeight="120" d:DesignWidth="300">
+    
+    <Grid>
+        <StackPanel>
+            <Button Content="btn" Width="80" Height="50"
+                    Command="{Binding ViewModel.onBtnCommand}"></Button>
+            <TextBlock Text="{Binding ViewModel.Cnt, Mode=TwoWay}"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
